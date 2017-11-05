@@ -1,0 +1,22 @@
+<!doctype html>
+{% extends "base.html" %}
+{% block content %}
+<div class="col-xs-12 col-md-10">
+  {% for b in blocks %}
+  <div class="card">
+    <div class="card-header">
+ 	  <a href="/article/list/{{b.id}}" style="font-size: 16px;">{{ b.name }}</a>
+      <span style="float:right;">{{ b.manager }}</span>
+    </div>
+    <div class="card-block">
+ 	  {{ b.desc }}
+ 	</div>
+  </div>
+  {% endfor %}
+ </div>
+<div class="col-xs-12 col-md-2">
+  <div class="card">
+   <center>个人中心</center>
+  </div>
+</div>
+{%endblock%} 
